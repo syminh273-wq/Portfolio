@@ -45,9 +45,9 @@ export default function RootLayout({
             "--y": `${mousePos.y}px`,
           } as React.CSSProperties}
         />
-        <div className="mx-auto min-h-screen max-w-screen-xl lg:flex lg:justify-between lg:gap-4">
+        <div className="mx-auto min-h-screen max-w-screen-xl lg:flex lg:justify-between lg:gap-8">
           <Sidebar />
-          <main className="lg:ml-[280px] flex-1 px-6 py-12 lg:py-24">
+          <main className="lg:ml-[260px] flex-1 px-4 py-8 lg:px-12 lg:py-24">
             {children}
           </main>
         </div>

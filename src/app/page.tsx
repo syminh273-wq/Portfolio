@@ -34,40 +34,55 @@ export default function Home() {
 
       {/* Experience Section */}
       <section id="experience" className="scroll-mt-24 group/list">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-blue-400 dark:text-blue-300 shrink-0">
-            Experience
-          </h2>
-          <div className="h-px w-full bg-zinc-200 dark:bg-zinc-800/50"></div>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400">
+              Professional
+            </h2>
+            <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">Experience</span>
+          </div>
+          <div className="h-px flex-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-800 to-transparent"></div>
         </div>
-        <div className="space-y-12">
+        
+        <div className="space-y-12 relative before:absolute before:inset-y-0 before:left-[-1px] md:before:left-[13.5rem] before:w-[2px] before:bg-zinc-100 dark:before:bg-zinc-800/50">
           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] lg:group-hover:drop-shadow-lg"></div>
-            <header className="z-10 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-2xl transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-100/50 lg:dark:group-hover:bg-zinc-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] lg:group-hover:drop-shadow-sm"></div>
+            
+            {/* Timeline Dot */}
+            <div className="absolute left-[-5px] md:left-[13.3rem] top-1.5 h-3 w-3 rounded-full border-2 border-white dark:border-zinc-950 bg-blue-500 z-20 shadow-[0_0_0_4px_rgba(59,130,246,0.1)]"></div>
+
+            <header className="z-10 text-[11px] font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 pt-1">
               Oct 2024 — Dec 2025
             </header>
+            
             <div className="z-10 md:col-span-3">
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
-                FULL-STACK DEVELOPER
-              </h3>
-              <p className="text-zinc-500 dark:text-zinc-400 font-medium">CHEK JSC</p>
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                  FULL-STACK DEVELOPER
+                </h3>
+                <div className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm">
+                  <span>CHEK JSC</span>
+                  <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
+                  <span className="text-xs font-medium">Enterprise Solutions</span>
+                </div>
+              </div>
               
-              <ul className="mt-4 space-y-3 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                <li className="flex gap-2">
-                  <span className="text-blue-500 font-bold">▹</span>
-                  <span><strong>Big Data Analytics Engineering:</strong> Built large-scale data processing systems using <span className="text-zinc-900 dark:text-zinc-200 font-medium underline decoration-blue-500/30">Apache Spark</span>, <span className="text-zinc-900 dark:text-zinc-200 font-medium underline decoration-blue-500/30">Cassandra</span>, and <span className="text-zinc-900 dark:text-zinc-200 font-medium underline decoration-blue-500/30">Clickhouse</span> for User Behavior Analysis Dashboards (CDP).</span>
+              <ul className="mt-6 space-y-4 text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <li className="flex gap-3">
+                  <span className="flex-none h-5 w-5 rounded-full bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-[10px] text-blue-500 font-bold border border-blue-100 dark:border-blue-500/20">1</span>
+                  <span><strong>Big Data Analytics Engineering:</strong> Built large-scale data processing systems using <span className="text-zinc-900 dark:text-zinc-200 font-medium border-b border-blue-500/30">Apache Spark</span>, <span className="text-zinc-900 dark:text-zinc-200 font-medium border-b border-blue-500/30">Cassandra</span>, and <span className="text-zinc-900 dark:text-zinc-200 font-medium border-b border-blue-500/30">Clickhouse</span> for User Behavior Analysis Dashboards (CDP).</span>
                 </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-500 font-bold">▹</span>
+                <li className="flex gap-3">
+                  <span className="flex-none h-5 w-5 rounded-full bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-[10px] text-blue-500 font-bold border border-blue-100 dark:border-blue-500/20">2</span>
                   <span><strong>System Performance Optimization:</strong> Enhanced stability via <strong>Multi-layer Cache</strong> (Redis & Aerospike), Cache Fallback mechanisms, and API optimization using Etag.</span>
                 </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-500 font-bold">▹</span>
+                <li className="flex gap-3">
+                  <span className="flex-none h-5 w-5 rounded-full bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-[10px] text-blue-500 font-bold border border-blue-100 dark:border-blue-500/20">3</span>
                   <span><strong>Scalable Architecture:</strong> Designed Multi-tenancy infrastructure, standardized code via Repository Pattern, and integrated (Haravan, Urbox, Firebase).</span>
                 </li>
               </ul>
 
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-8 flex flex-wrap gap-2">
                 {[
                   "Python (Django)",
                   "Spark",
@@ -78,7 +93,7 @@ export default function Home() {
                   "Temporal",
                   "Sentry"
                 ].map((tag) => (
-                  <span key={tag} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
+                  <span key={tag} className="inline-flex items-center rounded-lg bg-zinc-100 dark:bg-zinc-800/50 px-2.5 py-1 text-[10px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700/50 group-hover:border-blue-500/20 group-hover:bg-blue-500/5 transition-all">
                     {tag}
                   </span>
                 ))}
@@ -90,30 +105,35 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="scroll-mt-24 group/list">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-blue-400 dark:text-blue-300 shrink-0">
-            Projects
-          </h2>
-          <div className="h-px w-full bg-zinc-200 dark:bg-zinc-800/50"></div>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400">
+              Personal
+            </h2>
+            <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">Projects</span>
+          </div>
+          <div className="h-px flex-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-800 to-transparent"></div>
         </div>
-        <div className="space-y-16">
+        <div className="space-y-6">
            {/* RentMaster */}
-           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 pb-12 border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 last:pb-0">
-             <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] lg:group-hover:drop-shadow-lg"></div>
+           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800/50 bg-zinc-50/30 dark:bg-zinc-900/10 hover:border-blue-500/20 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30">
              <div className="md:col-span-4 z-10">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
-                  <Link href="https://github.com/hsminh/DotnetRentMaster" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
-                    <span className="bg-gradient-to-r from-blue-500/0 to-blue-500/0 group-hover/link:from-blue-500/10 group-hover/link:to-blue-500/5 px-1 -mx-1 rounded transition-all">
-                      RentMaster (Fullstack) <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span>
-                    </span>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
+                    <Link href="https://github.com/hsminh/DotnetRentMaster" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
+                      <span>RentMaster (Fullstack)</span>
+                    </Link>
+                  </h3>
+                  <Link href="https://github.com/hsminh/DotnetRentMaster" target="_blank" className="h-8 w-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 hover:text-blue-500 transition-all border border-zinc-200 dark:border-zinc-700">
+                    <span className="text-xs">↗</span>
                   </Link>
-                </h3>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Hệ sinh thái quản lý và tìm kiếm phòng trọ, hỗ trợ nhiều đối người dùng (Admin, Chủ trọ, Người thuê) với các tính năng từ quản lý bất động sản đến thanh toán và thông báo.
+                </div>
+                <p className="mt-2 text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  A property management and rental ecosystem supporting multiple user roles (Admin, Landlord, Tenant) with features ranging from real estate management to payments and notifications.
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["ASP.NET Core", "Next.js", "PostgreSQL", "Real-time Notifications", "Payments"].map((tag) => (
-                    <span key={tag} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["ASP.NET Core", "Next.js", "PostgreSQL", "Real-time", "Payments"].map((tag) => (
+                    <span key={tag} className="inline-flex items-center rounded-lg bg-blue-500/5 px-2.5 py-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 border border-blue-500/10">
                       {tag}
                     </span>
                   ))}
@@ -122,22 +142,24 @@ export default function Home() {
            </div>
 
            {/* MyShop */}
-           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 pb-12 border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 last:pb-0">
-             <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] lg:group-hover:drop-shadow-lg"></div>
+           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800/50 bg-zinc-50/30 dark:bg-zinc-900/10 hover:border-blue-500/20 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30">
              <div className="md:col-span-4 z-10">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
-                  <Link href="https://github.com/hsminh/MyShop" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
-                    <span className="bg-gradient-to-r from-blue-500/0 to-blue-500/0 group-hover/link:from-blue-500/10 group-hover/link:to-blue-500/5 px-1 -mx-1 rounded transition-all">
-                      MyShop (Java) <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span>
-                    </span>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
+                    <Link href="https://github.com/hsminh/MyShop" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
+                      <span>MyShop (Java)</span>
+                    </Link>
+                  </h3>
+                  <Link href="https://github.com/hsminh/MyShop" target="_blank" className="h-8 w-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 hover:text-blue-500 transition-all border border-zinc-200 dark:border-zinc-700">
+                    <span className="text-xs">↗</span>
                   </Link>
-                </h3>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Nền tảng thương mại điện tử (E-commerce) hoàn chỉnh, tập trung vào luồng mua sắm trực tuyến gồm quản lý sản phẩm, giỏ hàng, đặt hàng và bảo mật tài khoản.
+                </div>
+                <p className="mt-2 text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  A complete E-commerce platform focusing on online shopping flows including product management, shopping cart, ordering, and account security.
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["Java", "Spring Boot", "MySQL", "Authentication", "Security"].map((tag) => (
-                    <span key={tag} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Java", "Spring Boot", "MySQL", "Security"].map((tag) => (
+                    <span key={tag} className="inline-flex items-center rounded-lg bg-blue-500/5 px-2.5 py-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 border border-blue-500/10">
                       {tag}
                     </span>
                   ))}
@@ -146,22 +168,24 @@ export default function Home() {
            </div>
 
            {/* NextjsRentMaster */}
-           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 pb-12 border-b border-zinc-200 dark:border-zinc-800/50 last:border-0 last:pb-0">
-             <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] lg:group-hover:drop-shadow-lg"></div>
+           <div className="group relative grid grid-cols-1 md:grid-cols-4 gap-4 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800/50 bg-zinc-50/30 dark:bg-zinc-900/10 hover:border-blue-500/20 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30">
              <div className="md:col-span-4 z-10">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
-                  <Link href="https://github.com/hsminh/NextjsRentMaster" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
-                    <span className="bg-gradient-to-r from-blue-500/0 to-blue-500/0 group-hover/link:from-blue-500/10 group-hover/link:to-blue-500/5 px-1 -mx-1 rounded transition-all">
-                      NextjsRentMaster (Frontend) <span className="inline-block transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1">↗</span>
-                    </span>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
+                    <Link href="https://github.com/hsminh/NextjsRentMaster" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-zinc-900 dark:text-zinc-50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors group/link">
+                      <span>NextjsRentMaster (Frontend)</span>
+                    </Link>
+                  </h3>
+                  <Link href="https://github.com/hsminh/NextjsRentMaster" target="_blank" className="h-8 w-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 hover:text-blue-500 transition-all border border-zinc-200 dark:border-zinc-700">
+                    <span className="text-xs">↗</span>
                   </Link>
-                </h3>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Giao diện hiện đại cho hệ thống RentMaster, tối ưu trải nghiệm người dùng trong việc tìm kiếm, xem chi tiết và quản lý thông tin thuê phòng trên đa thiết bị.
+                </div>
+                <p className="mt-2 text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Modern interface for the RentMaster system, optimizing user experience in searching, viewing details, and managing rental information across multiple devices.
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["Next.js", "Tailwind CSS", "Responsive Design", "User Experience"].map((tag) => (
-                    <span key={tag} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Next.js", "Tailwind CSS", "UX Design"].map((tag) => (
+                    <span key={tag} className="inline-flex items-center rounded-lg bg-blue-500/5 px-2.5 py-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 border border-blue-500/10">
                       {tag}
                     </span>
                   ))}
@@ -173,93 +197,59 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="scroll-mt-24">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-blue-400 dark:text-blue-300 shrink-0">
-            Skills
-          </h2>
-          <div className="h-px w-full bg-zinc-200 dark:bg-zinc-800/50"></div>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400">
+              Technical
+            </h2>
+            <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">Stack</span>
+          </div>
+          <div className="h-px flex-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-800 to-transparent"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Languages</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Python", "TypeScript", "JavaScript", "Java", "C/C++"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            { title: "Languages", skills: ["Python", "TypeScript", "JavaScript", "Java", "C/C++"] },
+            { title: "Backend", skills: ["Django", "FastAPI", "Node.js", "REST APIs", "MQTT"] },
+            { title: "Frontend", skills: ["Next.js", "React.js", "TailwindCSS", "MapLibre"] },
+            { title: "Databases", skills: ["PostgreSQL", "MongoDB", "MySQL", "Cassandra"] },
+            { title: "Platforms", skills: ["Temporal", "Redis", "Aerospike"] },
+            { title: "Cloud & DevOps", skills: ["AWS S3", "Cloudflare R2", "Git", "Docker"] }
+          ].map((category) => (
+            <div key={category.title} className="p-5 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span key={skill} className="inline-flex items-center rounded-lg bg-zinc-50 dark:bg-zinc-800/50 px-2.5 py-1 text-[10px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700/50">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Backend</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Django", "FastAPI", "Node.js", "Express.js", "RESTful APIs", "WebSockets", "MQTT"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Frontend</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Next.js", "React.js", "Astro", "TailwindCSS", "MapLibre", "HTML5", "CSS3"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Databases</h3>
-            <div className="flex flex-wrap gap-2">
-              {["PostgreSQL", "MongoDB", "MySQL", "Cassandra", "SQL Server"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Platforms & Tools</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Temporal"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="font-bold mb-4 text-zinc-900 dark:text-zinc-50">Cloud & DevOps</h3>
-            <div className="flex flex-wrap gap-2">
-              {["AWS S3", "Cloudflare R2", "Git"].map((skill) => (
-                <span key={skill} className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-300 border border-blue-500/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* Education Section */}
       <section id="education" className="scroll-mt-24 pb-24">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-blue-400 dark:text-blue-300 shrink-0">
-            Education
-          </h2>
-          <div className="h-px w-full bg-zinc-200 dark:bg-zinc-800/50"></div>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500 dark:text-blue-400">
+              Academic
+            </h2>
+            <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">Education</span>
+          </div>
+          <div className="h-px flex-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-800 to-transparent"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <header className="text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-            2021 — 2025
-          </header>
-          <div className="md:col-span-3">
-             <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
-               SAIGON TECHNOLOGY UNIVERSITY(STU)
-             </h3>
-             <p className="text-zinc-600 dark:text-zinc-400 mt-2">Bachelor of Computer Science</p>
+        
+        <div className="p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/30 dark:bg-zinc-900/10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">STU - Saigon Technology University</h3>
+              <p className="text-zinc-500 dark:text-zinc-400 font-medium text-sm">Bachelor of Computer Science</p>
+            </div>
+            <div className="text-[11px] font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+              2021 — 2025
+            </div>
           </div>
         </div>
       </section>
