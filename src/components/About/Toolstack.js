@@ -13,39 +13,28 @@ import {
   SiPycharm,
 } from "react-icons/si";
 
+const toolStack = [
+  { Icon: SiMacos, label: "macOS" },
+  { Icon: SiJetbrains, label: "JetBrains" },
+  { Icon: SiRider, label: "Rider" },
+  { Icon: SiIntellijidea, label: "IntelliJ IDEA" },
+  { Icon: SiWebstorm, label: "WebStorm" },
+  { Icon: SiPycharm, label: "PyCharm" },
+  { Icon: SiVisualstudiocode, label: "VS Code" },
+  { Icon: SiPostman, label: "Postman" },
+  { Icon: SiSlack, label: "Slack" },
+  { Icon: SiVercel, label: "Vercel" },
+];
+
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMacos />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiJetbrains />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRider />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiIntellijidea />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiWebstorm />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPycharm />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
+    <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
+      {toolStack.map(({ Icon, label }) => (
+        <Col xs={4} md={2} className="tech-icons" key={label}>
+          <span className="tech-tooltip">{label}</span>
+          <Icon />
+        </Col>
+      ))}
     </Row>
   );
 }

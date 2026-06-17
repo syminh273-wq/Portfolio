@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import pdf from "../../Assets/resume.pdf";
-import { AiOutlineDownload, AiOutlineMail, AiOutlinePhone, AiFillGithub } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import { useI18n } from "../../i18n/I18nContext";
 
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
+  const { t } = useI18n();
   const [width, setWidth] = useState(1200);
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -45,31 +46,9 @@ function ResumeNew() {
   return (
     <div>
       <Container fluid className="resume-section">
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row>
-
-        <Row className="cv-quick-links-row">
-          <div className="cv-quick-links">
-            <a href="https://linkedin.com/in/sminh/" target="_blank" rel="noopener noreferrer" className="cv-quick-link">
-              <FaLinkedinIn /> LinkedIn
-            </a>
-            <a href="https://github.com/syminh273-wq" target="_blank" rel="noopener noreferrer" className="cv-quick-link">
-              <AiFillGithub /> GitHub
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=syminh273@gmail.com" target="_blank" rel="noopener noreferrer" className="cv-quick-link">
-              <AiOutlineMail /> syminh273@gmail.com
-            </a>
-          </div>
-        </Row>
+        <h1 className="project-heading" style={{ textAlign: "center" }}>
+          {t("resume.heading1")} <strong className="purple">{t("resume.heading2")}</strong>
+        </h1>
 
         <Row className="resume" style={{
           justifyContent: "center",
@@ -132,60 +111,8 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{t("resume.download")}
           </Button>
-        </Row>
-
-        <Row style={{ justifyContent: "center", marginTop: "60px", marginBottom: "20px" }}>
-          <Col md={8}>
-            <h2 className="project-heading" style={{ textAlign: "center", marginBottom: "30px" }}>
-              Get In <strong className="purple">Touch</strong>
-            </h2>
-            <div className="contact-grid">
-              {[
-                {
-                  icon: <AiOutlineMail style={{ fontSize: "1.4em" }} />,
-                  label: "Email",
-                  value: "syminh273@gmail.com",
-                  href: "https://mail.google.com/mail/?view=cm&fs=1&to=syminh273@gmail.com",
-                },
-                {
-                  icon: <AiOutlinePhone style={{ fontSize: "1.4em" }} />,
-                  label: "Phone",
-                  value: "+0783324748",
-                  href: "tel:+0783324748",
-                },
-                {
-                  icon: <AiFillGithub style={{ fontSize: "1.4em" }} />,
-                  label: "GitHub",
-                  value: "syminh273-wq",
-                  href: "https://github.com/syminh273-wq",
-                },
-                {
-                  icon: <FaLinkedinIn style={{ fontSize: "1.3em" }} />,
-                  label: "LinkedIn",
-                  value: "linkedin.com/in/sminh",
-                  href: "https://linkedin.com/in/sminh/",
-                },
-              ].map((item, i) => (
-                <a
-                  key={i}
-                  href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="contact-card-link"
-                >
-                  <div className="contact-card">
-                    <div className="contact-card-icon">{item.icon}</div>
-                    <div>
-                      <p className="contact-card-label">{item.label}</p>
-                      <p className="contact-card-value">{item.value}</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </Col>
         </Row>
       </Container>
     </div>

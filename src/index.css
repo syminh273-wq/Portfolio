@@ -4,8 +4,26 @@
 
 body {
   margin: 0;
-  font-family: "PT Mono", monospace !important;
+  font-family: "Outfit", "Segoe UI", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(10 18 40), rgb(8 14 32));
+}
+
+/* Monospace kept only for "code-like" accents (headings, badges, pills)
+   to preserve the developer-portfolio identity without hurting the
+   readability of long-form paragraphs, which use the sans-serif body font. */
+.font-mono,
+.heading,
+.heading-name,
+.project-heading,
+.Typewriter__wrapper,
+.Typewriter__cursor,
+.tech-badge,
+.exp-period,
+.timeline-period,
+.timeline-company,
+.cv-quick-link,
+.resume .resume-item .resume-title,
+.contact-card-value {
+  font-family: "PT Mono", monospace !important;
 }

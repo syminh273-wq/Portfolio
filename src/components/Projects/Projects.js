@@ -1,34 +1,46 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ProjectDetail from "./ProjectDetail";
 import chatify from "../../Assets/Projects/chatify.png";
 import blog from "../../Assets/Projects/blog.png";
 import { MdWork } from "react-icons/md";
 import { FaCode, FaTasks, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useI18n } from "../../i18n/I18nContext";
 
 const experiences = [
   {
     company: "CHEK JSC",
     position: "Fullstack Developer",
-    period: "Oct 2024 – Present",
+    period: "Jun 2024 – Present",
     summary:
-      "Built and maintained features for a production-grade multi-tenant SaaS platform covering CRM, CDP, campaigns, loyalty, gamification, and task-management workflows.",
+      "Built and maintained backend/infra features for a production-grade multi-tenant SaaS platform (landlord/patron/tenant architecture) covering CRM, CDP, campaigns, loyalty, gamification, and task-management workflows, backed by a polyglot persistence layer of Cassandra, ClickHouse, Aerospike, PostgreSQL, and Redis.",
     techStack: [
       "Django", "FastAPI", "Python", "TypeScript", "React", "Tauri",
-      "PostgreSQL", "Redis", "ClickHouse", "ScyllaDB", "Aerospike",
-      "Amazon S3", "Cloudflare R2", "Firebase", "Typesense",
-      "ONNX Runtime", "LanceDB", "Ollama", "Temporal", "Django Channels",
+      "PostgreSQL", "Redis", "ClickHouse", "ScyllaDB", "Cassandra", "Aerospike",
+      "Celery", "RQ", "Temporal", "AWS Storage", "Cloudflare R2",
+      "Firebase Admin", "Typesense", "ONNX Runtime", "LanceDB", "Ollama",
+      "Django Channels", "Napas", "Urbox", "Haravan",
     ],
     responsibilities: [
-      "Built features for a multi-tenant SaaS platform covering workspace, CRM, CDP, campaigns, loyalty, gamification, and task-management workflows.",
+      "Built features for a multi-tenant SaaS platform (landlord/patron/tenant data-isolation model) covering workspace, CRM, CDP, campaigns, loyalty, gamification, and task-management workflows.",
       "Implemented Napas VietQR QR-code generation for bank transfers and merchant payment flows across tenant workflows.",
       "Implemented ClickHouse-backed leaderboard analytics for loyalty and gamification workflows, supporting point accumulation, ranking, and user performance tracking.",
-      "Developed a cloud-backed drive service using Amazon S3 and Cloudflare R2, supporting file uploads, metadata tracking, access control, and delivery.",
+      "Built ledger and wallet transaction serializers on ScyllaDB/Cassandra, and implemented a custom Cassandra-backed Celery result backend.",
+      "Designed a custom Aerospike cache backend (core/cache/aerospike/) as a high-performance key-value store for real-time session and caching workloads.",
+      "Ran Celery with a Redis broker alongside a secondary django-rq/RQ task queue to separate latency-sensitive jobs from long-running background work.",
+      "Orchestrated long-running workflows using Temporal.io, including voucher redemption, discount code sync, and data processing pipelines.",
+      "Developed a cloud-backed drive service using AWS Storage (S3) and Cloudflare R2, supporting file uploads, metadata tracking, access control, and delivery.",
       "Delivered a local RAG-based AI assistant for the Tauri desktop app using ONNX Runtime, LanceDB, and Ollama for embeddings, vector search, and contextual responses.",
-      "Integrated Aerospike as a high-performance key-value store for real-time session and caching workloads across tenant services.",
-      "Orchestrated long-running background workflows using Temporal, covering onboarding, notification dispatch, and data sync pipelines.",
       "Implemented full-text search across platform entities using Typesense with real-time indexing and multi-tenant filtering.",
       "Built real-time features using WebSocket (Django Channels) for live data streaming and event-driven communication.",
+      "Integrated third-party fintech and e-commerce platforms for the Vietnam market: Napas MMC (payment gateway), Urbox (gift/voucher platform), Haravan (e-commerce order sync), and Firebase Admin for push notifications.",
+      "Built a Jira-style project/work-management module (CollabSuite) from the ground up — work-item types, custom fields, project teams, and sprint iterations.",
+      "Implemented the CRM Lead-to-Deal pipeline: lead capture, customizable sales pipeline stages, and Deal/Account entities.",
+      "Built a standalone Gamification API (points, campaigns, prize draws) decoupled from the core Rewards service, serving both business and consumer clients.",
+      "Implemented multi-tenant platform infrastructure: cluster-cell based tenant routing/initialization and per-organization settings & branding cache.",
+      "Built the E-Sign module end-to-end: signature field placement on documents, PDF signature metadata embedding, and document/signer assignment.",
+      "Built the Commerce voucher engine, including voucher creation and category/criteria-based eligibility rules.",
+      "Implemented consumer onboarding workflows and enforced integer-precision handling for money/point amounts across the Accounting ledger.",
     ],
   },
 ];
@@ -91,15 +103,16 @@ function ExperienceCard({ exp }) {
 }
 
 function Projects() {
+  const { t, locale } = useI18n();
   return (
     <Container fluid className="project-section">
       <Container>
         {/* Experience */}
         <h1 className="project-heading">
-          My <strong className="purple">Experience</strong>
+          {t("projects.experience")} <strong className="purple">{t("projects.experienceTail")}</strong>
         </h1>
         <p style={{ color: "#8892b0", textAlign: "center", marginBottom: "40px" }}>
-          Professional journey and work history
+          {locale === "vi" ? "Những cột mốc trong sự nghiệp" : "Highlights along my career journey"}
         </p>
 
         {experiences.map((exp, i) => (
@@ -111,10 +124,10 @@ function Projects() {
 
         {/* Projects */}
         <h1 className="project-heading">
-          My Recent <strong className="purple">Projects</strong>
+          {t("projects.recent")} <strong className="purple">{t("projects.projects")}</strong>
         </h1>
         <p style={{ color: "#8892b0", textAlign: "center", marginBottom: "10px" }}>
-          Here are a few projects I've worked on recently.
+          {locale === "vi" ? "Một vài dự án tôi đã làm gần đây." : "Here are a few projects I've worked on recently."}
         </p>
 
         <div className="project-block">

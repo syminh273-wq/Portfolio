@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { DayAndNightToggle } from "react-day-and-night-toggle";
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -11,15 +12,19 @@ import {
   AiOutlineUser,
   AiFillGithub,
   AiOutlineMail,
+  AiOutlineHeart,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { FaLinkedinIn } from "react-icons/fa";
+import LanguageToggle from "./LanguageToggle/LanguageToggle";
+import { useI18n } from "../i18n/I18nContext";
 
 const NAV_ITEMS = [
-  { id: "home",       icon: <AiOutlineHome />,                label: "Home"       },
-  { id: "experience", icon: <AiOutlineFundProjectionScreen />, label: "Experience" },
-  { id: "skills",     icon: <AiOutlineUser />,               label: "Skills"     },
-  { id: "resume",     icon: <CgFileDocument />,               label: "Resume"     },
+  { id: "home",       icon: <AiOutlineHome />,                labelKey: "nav.home"       },
+  { id: "experience", icon: <AiOutlineFundProjectionScreen />, labelKey: "nav.experience" },
+  { id: "skills",     icon: <AiOutlineUser />,               labelKey: "nav.skills"     },
+  { id: "resume",     icon: <CgFileDocument />,               labelKey: "nav.resume"     },
+  { id: "interests",  icon: <AiOutlineHeart />,                labelKey: "nav.interests"  },
 ];
 
 const SOCIAL_LINKS = [
@@ -28,7 +33,8 @@ const SOCIAL_LINKS = [
   { href: "https://mail.google.com/mail/?view=cm&fs=1&to=syminh273@gmail.com", icon: <AiOutlineMail />, label: "Email"    },
 ];
 
-function NavBar() {
+function NavBar({ isDarkMode, toggleTheme }) {
+  const { t } = useI18n();
   const [expand, setExpand]        = useState(false);
   const [navColour, setNavColour]  = useState(false);
   const [activeSection, setActive] = useState("home");
@@ -91,7 +97,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           {/* Nav links */}
           <Nav className="ms-auto">
-            {NAV_ITEMS.map(({ id, icon, label }) => (
+            {NAV_ITEMS.map(({ id, icon, labelKey }) => (
               <Nav.Item key={id}>
                 <Nav.Link
                   href={`#${id}`}
@@ -99,7 +105,7 @@ function NavBar() {
                   className={activeSection === id ? "nav-active" : ""}
                 >
                   {React.cloneElement(icon, { style: { marginBottom: "2px" } })}{" "}
-                  {label}
+                  {t(labelKey)}
                 </Nav.Link>
               </Nav.Item>
             ))}
@@ -107,7 +113,17 @@ function NavBar() {
 
           {/* Social icons + fork button — plain flex, no Bootstrap nav list */}
           <div className="navbar-right-actions">
+            <LanguageToggle />
             <span className="navbar-social-divider" />
+
+            <span className="navbar-theme-toggle" aria-label={t("aria.toggleTheme")}>
+              <DayAndNightToggle
+                onChange={toggleTheme}
+                checked={isDarkMode}
+                animationInactive={false}
+                size={24}
+              />
+            </span>
 
             {SOCIAL_LINKS.map(({ href, icon, label }) => (
               <a

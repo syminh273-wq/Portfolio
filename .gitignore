@@ -27,3 +27,15 @@ yarn-error.log*
 
 Server/node_modules
 Server/config.js
+
+# local design/review screenshots
+/before_dark.png
+/d1.png
+/d2.png
+/d3.png
+/d4.png
+
+# JetBrains project files
+.idea/modules.xml
+.idea/Portfolio.iml
+.idea/vcs.xml

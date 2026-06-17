@@ -12,63 +12,61 @@ import {
 import {
   SiRedis,
   SiFirebase,
-  SiNextdotjs,
   SiPostgresql,
   SiDjango,
   SiFastapi,
   SiSpringboot,
   SiDocker,
   SiTypescript,
+  SiClickhouse,
+  SiScylladb,
+  SiApachecassandra,
+  SiAerospike,
+  SiCelery,
+  SiTemporal,
+  SiOnnx,
+  SiAmazons3,
 } from "react-icons/si";
+import { FaSearch, FaStream, FaRobot } from "react-icons/fa";
+
+const techStack = [
+  { Icon: SiTypescript, label: "TypeScript" },
+  { Icon: DiJavascript1, label: "JavaScript" },
+  { Icon: DiPython, label: "Python" },
+  { Icon: DiJava, label: "Java" },
+  { Icon: SiDjango, label: "Django" },
+  { Icon: SiFastapi, label: "FastAPI" },
+  { Icon: SiSpringboot, label: "Spring Boot" },
+  { Icon: DiReact, label: "React" },
+  { Icon: DiNodejs, label: "Node.js" },
+  { Icon: SiPostgresql, label: "PostgreSQL" },
+  { Icon: DiMongodb, label: "MongoDB" },
+  { Icon: SiRedis, label: "Redis" },
+  { Icon: DiGit, label: "Git" },
+  { Icon: SiDocker, label: "Docker" },
+  { Icon: SiFirebase, label: "Firebase" },
+  { Icon: SiClickhouse, label: "ClickHouse" },
+  { Icon: SiScylladb, label: "ScyllaDB" },
+  { Icon: SiApachecassandra, label: "Cassandra" },
+  { Icon: SiAerospike, label: "Aerospike" },
+  { Icon: FaSearch, label: "Typesense" },
+  { Icon: SiCelery, label: "Celery" },
+  { Icon: FaStream, label: "RQ (Redis Queue)" },
+  { Icon: SiTemporal, label: "Temporal.io" },
+  { Icon: SiOnnx, label: "ONNX Runtime" },
+  { Icon: FaRobot, label: "Ollama" },
+  { Icon: SiAmazons3, label: "AWS Storage" },
+];
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDjango />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFastapi />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSpringboot />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDocker />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
+      {techStack.map(({ Icon, label }) => (
+        <Col xs={4} md={2} className="tech-icons" key={label}>
+          <span className="tech-tooltip">{label}</span>
+          <Icon />
+        </Col>
+      ))}
     </Row>
   );
 }

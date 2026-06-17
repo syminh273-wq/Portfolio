@@ -1,59 +1,53 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { useI18n } from "../../i18n/I18nContext";
+
+const ACTIVITIES = [
+  { en: "Exploring AI Technologies & applying them to real-world products 🤖", vi: "Khám phá công nghệ AI & áp dụng vào sản phẩm thực tế 🤖" },
+  { en: "Building Side Projects to experiment with new ideas 🚀", vi: "Làm side project để thử nghiệm ý tưởng mới 🚀" },
+  { en: "Learning New Frameworks and keeping up with industry trends 📚", vi: "Học framework mới và theo kịp xu hướng ngành 📚" },
+  { en: "Contributing to team growth through code reviews and knowledge sharing 🤝", vi: "Đóng góp vào sự phát triển của team qua code review và chia sẻ kiến thức 🤝" },
+  { en: "Reading tech blogs and open-source exploration 🌐", vi: "Đọc blog công nghệ và khám phá mã nguồn mở 🌐" },
+];
 
 function AboutCard() {
+  const { t, locale } = useI18n();
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi everyone! I'm <span className="purple">Ho Sy Minh</span>{" "}
-            from <span className="purple">Vietnam</span>.
+            {t("aboutCard.greeting")} <span className="purple">{t("aboutCard.name")}</span>{" "}
+            {t("aboutCard.from")} <span className="purple">{t("aboutCard.country")}</span>.
             <br />
-            I'm currently working as a{" "}
-            <span className="purple">Fullstack Developer</span> at{" "}
-            <span className="purple">CHEK JSC</span>, where I design and
-            build end-to-end web applications, from database architecture
-            and RESTful APIs to responsive user interfaces.
+            {locale === "vi" ? "Tôi hiện đang làm" : "I'm currently working as a"}{" "}
+            <span className="purple">{t("aboutCard.role")}</span> {t("aboutCard.at")}{" "}
+            <span className="purple">{t("aboutCard.company")}</span>, {t("aboutCard.where")}
             <br />
-            I hold a degree in{" "}
-            <span className="purple">Information Technology</span> from{" "}
-            <span className="purple">Saigon Technology University (STU)</span>,
-            where I developed a solid foundation in software engineering
-            principles, data structures, and system design.
+            {t("aboutCard.edu")}{" "}
+            <span className="purple">{t("aboutCard.major")}</span> {locale === "vi" ? "từ" : "from"}{" "}
+            <span className="purple">{t("aboutCard.school")}</span>, {t("aboutCard.schoolYear")}
             <br />
             <br />
-            Throughout my career, I have had the opportunity to work on
-            diverse projects ranging from SaaS platforms and real-time
-            systems to enterprise desktop applications. I enjoy tackling
-            complex technical challenges and turning ideas into reliable,
-            scalable products.
+            {locale === "vi"
+              ? "Trong suốt sự nghiệp, tôi đã có cơ hội làm việc trên nhiều dự án đa dạng từ SaaS, hệ thống real-time đến ứng dụng desktop doanh nghiệp. Tôi thích giải quyết các bài toán kỹ thuật phức tạp và biến ý tưởng thành sản phẩm đáng tin cậy, có khả năng mở rộng."
+              : "Throughout my career, I have had the opportunity to work on diverse projects ranging from SaaS platforms and real-time systems to enterprise desktop applications. I enjoy tackling complex technical challenges and turning ideas into reliable, scalable products."}
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            {locale === "vi" ? "Ngoài coding, còn một số hoạt động khác tôi cũng thích làm!" : "Apart from coding, some other activities that I love to do!"}
           </p>
 
           <ul>
-            <li className="about-activity">
-              <ImPointRight /> Exploring AI Technologies & applying them to real-world products 🤖
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Building Side Projects to experiment with new ideas 🚀
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Learning New Frameworks and keeping up with industry trends 📚
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Contributing to team growth through code reviews and knowledge sharing 🤝
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Reading tech blogs and open-source exploration 🌐
-            </li>
+            {ACTIVITIES.map((act, i) => (
+              <li key={i} className="about-activity">
+                <ImPointRight /> {locale === "vi" ? act.vi : act.en}
+              </li>
+            ))}
           </ul>
 
           <p style={{ color: "rgb(126 155 172)" }}>
-            "Build with passion, scale with precision!"{" "}
+            {locale === "vi" ? '"Xây bằng đam mê, mở rộng bằng chính xác!"' : '"Build with passion, scale with precision!"'}{" "}
           </p>
           <footer className="blockquote-footer">Minh</footer>
         </blockquote>

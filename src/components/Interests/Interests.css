@@ -1,0 +1,196 @@
+/* === Interests Section === */
+.interests-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.interests-subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  margin-bottom: 50px;
+  opacity: 0.85;
+}
+
+.interests-grid {
+  margin-top: 30px;
+}
+
+.interest-col {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.interest-card {
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 14px;
+  background: rgba(20, 25, 50, 0.55);
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  animation: interests-fade-in 0.6s ease both;
+}
+
+.interest-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent, #a78bfa), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+  background: rgba(30, 35, 70, 0.7);
+  border-color: var(--accent, #a78bfa);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35), 0 0 24px color-mix(in srgb, var(--accent, #a78bfa) 25%, transparent);
+}
+
+.interest-card:hover::before {
+  opacity: 1;
+}
+
+.interest-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent, #a78bfa) 15%, transparent);
+  margin-bottom: 18px;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.interest-card:hover .interest-icon-wrap {
+  transform: scale(1.1) rotate(-6deg);
+  background: color-mix(in srgb, var(--accent, #a78bfa) 30%, transparent);
+}
+
+.interest-icon {
+  font-size: 2rem;
+  color: var(--accent, #a78bfa);
+  display: flex;
+}
+
+.interest-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.interest-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@keyframes interests-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.interest-col:nth-child(1) .interest-card { animation-delay: 0.05s; }
+.interest-col:nth-child(2) .interest-card { animation-delay: 0.15s; }
+.interest-col:nth-child(3) .interest-card { animation-delay: 0.25s; }
+.interest-col:nth-child(4) .interest-card { animation-delay: 0.35s; }
+
+/* Light mode */
+body.light-mode .interests-subtitle { color: #475569; }
+body.light-mode .interest-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(167, 139, 250, 0.25);
+}
+body.light-mode .interest-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+body.light-mode .interest-title { color: #1e293b; }
+body.light-mode .interest-desc { color: #64748b; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interests-section { padding: 50px 0; }
+  .interest-card { padding: 26px 20px; }
+  .interest-icon { font-size: 1.7rem; }
+  .interest-icon-wrap { width: 56px; height: 56px; }
+}
+
+/* === Closing "personality" block — text-only, matches Home2 style === */
+.interests-closing-row {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.interests-closing-col {
+  text-align: left;
+}
+
+.interests-closing-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--text-primary, #e2e8f0);
+  margin-bottom: 22px;
+  line-height: 1.25;
+}
+
+.interests-closing-body {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary, #cbd5e1);
+  margin-bottom: 28px;
+}
+
+.interests-vibe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.interests-vibe-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--tag-color, #a78bfa);
+  background: color-mix(in srgb, var(--tag-color, #a78bfa) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tag-color, #a78bfa) 40%, transparent);
+  transition: transform 0.25s ease, background 0.25s ease;
+  cursor: default;
+}
+
+.interests-vibe-tag:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--tag-color, #a78bfa) 22%, transparent);
+}
+
+/* Light mode for closing */
+body.light-mode .interests-closing-title { color: #1e293b; }
+body.light-mode .interests-closing-body { color: #475569; }
+
+@media (max-width: 768px) {
+  .interests-closing-row { margin-top: 20px; margin-bottom: 40px; }
+  .interests-closing-title { font-size: 1.55em !important; }
+  .interests-closing-body { font-size: 0.95rem; }
+}

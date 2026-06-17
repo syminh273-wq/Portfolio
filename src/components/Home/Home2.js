@@ -1,62 +1,59 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
+import DevAvatar from "./DevAvatar";
+import { useI18n } from "../../i18n/I18nContext";
 
 function Home2() {
+  const { t } = useI18n();
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              {t("home2.heading1")} <span className="purple"> {t("home2.heading2")} </span> {t("home2.heading3")}
             </h1>
             <p className="home-about-body">
-              I'm a <span className="purple">Full-stack Engineer</span> with 2+ years of hands-on experience building SaaS, desktop, and real-time systems.
+              {t("home2.p1")} <span className="purple">{t("home2.p1Role")}</span> {t("home2.p1Tail")}
               <br />
               <br />
-              I am proficient in languages like 
+              {t("home2.p2Lead")}
               <i>
-                <b className="purple"> Python, TypeScript, Java, and SQL. </b>
+                <b className="purple"> {t("home2.p2Lang")} </b>
               </i>
               <br />
               <br />
-              My expertise lies in building high-performance backend APIs using 
+              {t("home2.p3Lead")}
               <i>
-                <b className="purple"> Django, FastAPI, and Spring Boot, </b>
+                <b className="purple"> {t("home2.p3Backend")} </b>
               </i>
-              as well as modern frontends with 
+              {t("home2.p3Tail")}
               <i>
-                <b className="purple"> React and TypeScript. </b>
+                <b className="purple"> {t("home2.p3Frontend")} </b>
               </i>
               <br />
               <br />
-              I have hands-on experience working with databases such as
+              {t("home2.p4Lead")}
               <i>
-                <b className="purple"> PostgreSQL, MySQL, and Redis, </b>
+                <b className="purple"> {t("home2.p4Db")} </b>
               </i>
-              and I am comfortable setting up CI/CD pipelines, containerization with
+              {t("home2.p4Tail")}
               <i>
-                <b className="purple"> Docker, </b>
+                <b className="purple"> {t("home2.p4Docker")} </b>
               </i>
-              and deploying applications on cloud platforms.
+              {t("home2.p4End")}
               <br />
               <br />
-              I have a strong interest in 
-              <b className="purple"> AI-assisted development </b> and building 
+              {t("home2.p5Lead")}
+              <b className="purple"> {t("home2.p5Ai")} </b> {t("home2.p5Mid")}
               <i>
-                <b className="purple"> scalable, maintainable systems </b>
+                <b className="purple"> {t("home2.p5Scale")} </b>
               </i>
-              that deliver real value to users. I am always eager to learn new
-              technologies, improve my craft, and take on challenging projects
-              that push the boundaries of what I can build.
+              {t("home2.p5Tail")}
             </p>
           </Col>
           <Col md={4} className="myAvtar mob-avatar-top">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+            <DevAvatar />
           </Col>
         </Row>
       </Container>
