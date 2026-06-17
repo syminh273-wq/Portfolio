@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440">
+  <defs>
+    <linearGradient id="screenBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b4b"/>
+      <stop offset="100%" stop-color="#111e3d"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2d5a"/>
+      <stop offset="100%" stop-color="#151f3a"/>
+    </linearGradient>
+    <linearGradient id="tagGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2a50"/>
+      <stop offset="100%" stop-color="#1e3060"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="lineGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background ambient glow -->
+  <ellipse cx="260" cy="210" rx="180" ry="150" fill="#5b8def" opacity="0.04" filter="url(#softGlow)"/>
+  <ellipse cx="200" cy="180" rx="100" ry="80" fill="#a78bfa" opacity="0.04" filter="url(#softGlow)"/>
+
+  <!-- Monitor outer frame -->
+  <rect x="80" y="65" width="360" height="240" rx="14" fill="url(#monitorGrad)" stroke="#2a3a6e" stroke-width="1.5"/>
+
+  <!-- Screen inner -->
+  <rect x="92" y="77" width="336" height="216" rx="8" fill="url(#screenBg)"/>
+
+  <!-- Titlebar -->
+  <rect x="92" y="77" width="336" height="30" rx="8" fill="#0f1930"/>
+  <rect x="92" y="96" width="336" height="11" fill="#0f1930"/>
+
+  <!-- Traffic lights -->
+  <circle cx="110" cy="92" r="5.5" fill="#ff5f57"/>
+  <circle cx="126" cy="92" r="5.5" fill="#febc2e"/>
+  <circle cx="142" cy="92" r="5.5" fill="#28c840"/>
+
+  <!-- File tab -->
+  <rect x="170" y="81" width="80" height="22" rx="4" fill="#1a2a50"/>
+  <text x="210" y="97" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#7b9cd0">portfolio.tsx</text>
+
+  <!-- Sidebar line numbers area -->
+  <rect x="92" y="107" width="28" height="186" fill="#0c1525"/>
+
+  <!-- Code content area -->
+  <!-- Line 1 -->
+  <text x="100" y="124" font-family="monospace" font-size="9.5" fill="#3a4a7a">1</text>
+  <text x="128" y="124" font-family="monospace" font-size="10" fill="#a78bfa">const</text>
+  <text x="162" y="124" font-family="monospace" font-size="10" fill="#e2e8f0"> dev</text>
+  <text x="185" y="124" font-family="monospace" font-size="10" fill="#5b8def"> =</text>
+  <text x="196" y="124" font-family="monospace" font-size="10" fill="#e2e8f0"> {</text>
+
+  <!-- Line 2 -->
+  <text x="100" y="142" font-family="monospace" font-size="9.5" fill="#3a4a7a">2</text>
+  <text x="128" y="142" font-family="monospace" font-size="10" fill="#7dd3fc">  name</text>
+  <text x="173" y="142" font-family="monospace" font-size="10" fill="#e2e8f0">:</text>
+  <text x="180" y="142" font-family="monospace" font-size="10" fill="#86efac"> "Ho Sy Minh"</text>
+  <text x="280" y="142" font-family="monospace" font-size="10" fill="#e2e8f0">,</text>
+
+  <!-- Line 3 -->
+  <text x="100" y="160" font-family="monospace" font-size="9.5" fill="#3a4a7a">3</text>
+  <text x="128" y="160" font-family="monospace" font-size="10" fill="#7dd3fc">  role</text>
+  <text x="168" y="160" font-family="monospace" font-size="10" fill="#e2e8f0">:</text>
+  <text x="175" y="160" font-family="monospace" font-size="10" fill="#86efac"> "Fullstack Engineer"</text>
+  <text x="328" y="160" font-family="monospace" font-size="10" fill="#e2e8f0">,</text>
+
+  <!-- Line 4 -->
+  <text x="100" y="178" font-family="monospace" font-size="9.5" fill="#3a4a7a">4</text>
+  <text x="128" y="178" font-family="monospace" font-size="10" fill="#7dd3fc">  skills</text>
+  <text x="177" y="178" font-family="monospace" font-size="10" fill="#e2e8f0">: [</text>
+
+  <!-- Line 5 -->
+  <text x="100" y="196" font-family="monospace" font-size="9.5" fill="#3a4a7a">5</text>
+  <text x="128" y="196" font-family="monospace" font-size="10" fill="#86efac">    "Python"</text>
+  <text x="198" y="196" font-family="monospace" font-size="10" fill="#e2e8f0">, </text>
+  <text x="210" y="196" font-family="monospace" font-size="10" fill="#86efac">"React"</text>
+  <text x="258" y="196" font-family="monospace" font-size="10" fill="#e2e8f0">, </text>
+  <text x="270" y="196" font-family="monospace" font-size="10" fill="#86efac">"TypeScript"</text>
+
+  <!-- Line 6 -->
+  <text x="100" y="214" font-family="monospace" font-size="9.5" fill="#3a4a7a">6</text>
+  <text x="128" y="214" font-family="monospace" font-size="10" fill="#86efac">    "Django"</text>
+  <text x="194" y="214" font-family="monospace" font-size="10" fill="#e2e8f0">, </text>
+  <text x="206" y="214" font-family="monospace" font-size="10" fill="#86efac">"FastAPI"</text>
+  <text x="260" y="214" font-family="monospace" font-size="10" fill="#e2e8f0">, </text>
+  <text x="272" y="214" font-family="monospace" font-size="10" fill="#86efac">"Docker"</text>
+
+  <!-- Line 7 -->
+  <text x="100" y="232" font-family="monospace" font-size="9.5" fill="#3a4a7a">7</text>
+  <text x="128" y="232" font-family="monospace" font-size="10" fill="#e2e8f0">  ],</text>
+
+  <!-- Line 8 -->
+  <text x="100" y="250" font-family="monospace" font-size="9.5" fill="#3a4a7a">8</text>
+  <text x="128" y="250" font-family="monospace" font-size="10" fill="#fbbf24">  passion</text>
+  <text x="192" y="250" font-family="monospace" font-size="10" fill="#e2e8f0">:</text>
+  <text x="199" y="250" font-family="monospace" font-size="10" fill="#86efac"> "Building with AI"</text>
+  <text x="338" y="250" font-family="monospace" font-size="10" fill="#e2e8f0">,</text>
+
+  <!-- Line 9 - highlighted -->
+  <rect x="92" y="256" width="336" height="16" fill="#1e2d5a" opacity="0.6"/>
+  <text x="100" y="268" font-family="monospace" font-size="9.5" fill="#3a4a7a">9</text>
+  <text x="128" y="268" font-family="monospace" font-size="10" fill="#e2e8f0">}</text>
+  <!-- Cursor -->
+  <rect x="140" y="258" width="7" height="13" rx="1" fill="#5b8def" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Screen top glow line -->
+  <rect x="92" y="77" width="336" height="2" rx="1" fill="url(#glowGrad)" opacity="0.7"/>
+
+  <!-- Monitor stand neck -->
+  <rect x="238" y="305" width="44" height="35" rx="3" fill="#151f3a"/>
+
+  <!-- Monitor base -->
+  <rect x="190" y="336" width="140" height="12" rx="6" fill="#1e2d5a"/>
+  <rect x="200" y="344" width="120" height="6" rx="3" fill="#151f3a"/>
+
+  <!-- Floating skill tags - left side -->
+  <g filter="url(#lineGlow)">
+    <rect x="18" y="108" width="52" height="24" rx="7" fill="url(#tagGrad1)" stroke="#5b8def" stroke-width="1" opacity="0.9"/>
+    <text x="44" y="124" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#5b8def" font-weight="bold">Python</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="18" y="158" width="46" height="24" rx="7" fill="url(#tagGrad1)" stroke="#61dafb" stroke-width="1" opacity="0.9"/>
+    <text x="41" y="174" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#61dafb" font-weight="bold">React</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="12" y="208" width="58" height="24" rx="7" fill="url(#tagGrad1)" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="41" y="224" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#3b82f6" font-weight="bold">TypeScript</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="18" y="258" width="50" height="24" rx="7" fill="url(#tagGrad1)" stroke="#2496ed" stroke-width="1" opacity="0.9"/>
+    <text x="43" y="274" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#2496ed" font-weight="bold">Docker</text>
+  </g>
+
+  <!-- Floating skill tags - right side -->
+  <g filter="url(#lineGlow)">
+    <rect x="450" y="120" width="56" height="24" rx="7" fill="url(#tagGrad1)" stroke="#a78bfa" stroke-width="1" opacity="0.9"/>
+    <text x="478" y="136" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#a78bfa" font-weight="bold">FastAPI</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="450" y="170" width="56" height="24" rx="7" fill="url(#tagGrad1)" stroke="#009688" stroke-width="1" opacity="0.9"/>
+    <text x="478" y="186" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#00bfa5" font-weight="bold">Django</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="452" y="220" width="54" height="24" rx="7" fill="url(#tagGrad1)" stroke="#f59e0b" stroke-width="1" opacity="0.9"/>
+    <text x="479" y="236" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#fbbf24" font-weight="bold">Spring</text>
+  </g>
+
+  <g filter="url(#lineGlow)">
+    <rect x="448" y="268" width="58" height="24" rx="7" fill="url(#tagGrad1)" stroke="#ec4899" stroke-width="1" opacity="0.9"/>
+    <text x="477" y="284" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#f472b6" font-weight="bold">AI / ML</text>
+  </g>
+
+  <!-- Decorative connecting dots and lines -->
+  <circle cx="72" cy="120" r="2.5" fill="#5b8def" opacity="0.5"/>
+  <line x1="72" y1="120" x2="82" y2="120" stroke="#5b8def" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="72" cy="170" r="2.5" fill="#61dafb" opacity="0.5"/>
+  <line x1="72" y1="170" x2="82" y2="170" stroke="#61dafb" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="448" cy="132" r="2.5" fill="#a78bfa" opacity="0.5"/>
+  <line x1="440" y1="132" x2="448" y2="132" stroke="#a78bfa" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="448" cy="182" r="2.5" fill="#009688" opacity="0.5"/>
+  <line x1="440" y1="182" x2="448" y2="182" stroke="#009688" stroke-width="1" opacity="0.3"/>
+
+  <!-- Decorative floating dots -->
+  <circle cx="55" cy="320" r="3" fill="#5b8def" opacity="0.35"/>
+  <circle cx="72" cy="340" r="2" fill="#a78bfa" opacity="0.3"/>
+  <circle cx="40" cy="350" r="1.5" fill="#61dafb" opacity="0.25"/>
+
+  <circle cx="460" cy="320" r="3" fill="#a78bfa" opacity="0.35"/>
+  <circle cx="478" cy="338" r="2" fill="#5b8def" opacity="0.3"/>
+  <circle cx="460" cy="352" r="1.5" fill="#61dafb" opacity="0.25"/>
+
+  <!-- Small floating brackets decoration -->
+  <text x="32" y="390" font-family="monospace" font-size="18" fill="#5b8def" opacity="0.15">{  }</text>
+  <text x="440" y="390" font-family="monospace" font-size="18" fill="#a78bfa" opacity="0.15">&lt; /&gt;</text>
+</svg>

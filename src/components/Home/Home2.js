@@ -13,41 +13,47 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I'm a <span className="purple">Full-stack Engineer</span> with 2+ years of hands-on experience building SaaS, desktop, and real-time systems.
               <br />
               <br />
-              I’m proficient in
+              I am proficient in languages like 
               <i>
-                <b className="purple">
-                  {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
-                </b>
+                <b className="purple"> Python, TypeScript, Java, and SQL. </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
               <br />
               <br />
-              My key areas of interest include developing
+              My expertise lies in building high-performance backend APIs using 
               <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
+                <b className="purple"> Django, FastAPI, and Spring Boot, </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              as well as modern frontends with 
               <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="purple"> React and TypeScript. </b>
               </i>
+              <br />
+              <br />
+              I have hands-on experience working with databases such as
+              <i>
+                <b className="purple"> PostgreSQL, MySQL, and Redis, </b>
+              </i>
+              and I am comfortable setting up CI/CD pipelines, containerization with
+              <i>
+                <b className="purple"> Docker, </b>
+              </i>
+              and deploying applications on cloud platforms.
+              <br />
+              <br />
+              I have a strong interest in 
+              <b className="purple"> AI-assisted development </b> and building 
+              <i>
+                <b className="purple"> scalable, maintainable systems </b>
+              </i>
+              that deliver real value to users. I am always eager to learn new
+              technologies, improve my craft, and take on challenging projects
+              that push the boundaries of what I can build.
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvtar mob-avatar-top">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
