@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ProjectDetail from "./ProjectDetail";
 import chatify from "../../Assets/Projects/chatify.png";
 import blog from "../../Assets/Projects/blog.png";

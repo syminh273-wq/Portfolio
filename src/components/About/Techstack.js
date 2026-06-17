@@ -12,7 +12,6 @@ import {
 import {
   SiRedis,
   SiFirebase,
-  SiNextdotjs,
   SiPostgresql,
   SiDjango,
   SiFastapi,
