@@ -1,76 +1,66 @@
 <h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
+  Ho Sy Minh — Portfolio<br/>
+  <a href="https://github.com/syminh273-wq/Portfolio" target="_blank">syminh273-wq/Portfolio</a>
 </h2>
+
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+
+[![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?logo=react&style=for-the-badge)](https://reactjs.org)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 </div>
 
-<br/>
+## About Me
 
-<center>
+I'm a **Full-stack Engineer** with 2+ years of hands-on experience building SaaS, desktop, and real-time systems.
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+- **Backend**: Django, FastAPI, Spring Boot, Node.js
+- **Frontend**: React, TypeScript, Next.js
+- **Databases**: PostgreSQL, MySQL, Redis, MongoDB, ClickHouse
+- **Cloud & DevOps**: Docker, AWS (S3, CloudFront R2), CI/CD pipelines
+- **AI/ML**: RAG, ONNX Runtime, LanceDB, Ollama, local AI integration
 
-</center>
+## Contact
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+| | |
+|---|---|
+| **Email** | [syminh273@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=syminh273@gmail.com) |
+| **LinkedIn** | [linkedin.com/in/sminh](https://linkedin.com/in/sminh/) |
+| **GitHub** | [github.com/syminh273-wq](https://github.com/syminh273-wq) |
+| **Phone** | +0783324748 |
 
-## TL;DR
+## Tech Stack
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+This portfolio is built with:
 
-## Built With
-
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
-
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
-
-## Features
-
-**📖 Multi-Page Layout**
-
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
-
-**📱 Fully Responsive**
+- **React.js** — single-page scroll layout with scroll-spy navbar
+- **React Bootstrap** — responsive grid & components
+- **react-tsparticles** — animated particle background
+- **react-parallax-tilt** — avatar tilt effect
+- **react-pdf** — in-browser CV viewer
 
 ## Getting Started
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+```bash
+# Clone
+git clone git@github.com:syminh273-wq/Portfolio.git
+cd Portfolio
 
-## 🛠 Installation and Setup Instructions
+# Install dependencies
+npm install
 
-1. Installation: `npm install`
+# Run locally
+npm start
+```
 
-2. In the project directory, you can run: `npm start`
+Open [http://localhost:3000](http://localhost:3000) to view in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+## Features
 
-## Usage Instructions
-
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
-
-### Show your support
-
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+- **Single-page scroll** with active section highlight in navbar
+- **Experience section** with collapsible responsibility cards and tech badges
+- **Projects section** with live demos and architecture details
+- **Skills section** with tech stack icons and GitHub contribution graph
+- **Resume section** with in-browser PDF viewer and quick-access links
+- **Fully responsive** — optimized for mobile (390px) through desktop
