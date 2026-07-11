@@ -39,3 +39,9 @@ Server/config.js
 .idea/modules.xml
 .idea/Portfolio.iml
 .idea/vcs.xml
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
