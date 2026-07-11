@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import pdf from "../../Assets/resume.pdf";
+import pdf from "../../Assets/FinalCV.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import { useI18n } from "../../i18n/I18nContext";
