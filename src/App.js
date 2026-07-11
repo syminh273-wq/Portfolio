@@ -16,7 +16,7 @@ function App() {
   const [load, setLoad] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const stored = localStorage.getItem("theme");
-    return stored ? stored === "dark" : true;
+    return stored ? stored === "dark" : false;
   });
 
   useEffect(() => {
