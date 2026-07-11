@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { AiOutlineMail, AiFillGithub, AiOutlinePhone } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { useI18n } from "../../i18n/I18nContext";
 
 const SOCIAL_LINKS = [
   {
@@ -28,7 +27,6 @@ const SOCIAL_LINKS = [
 ];
 
 function Footer() {
-  const { t, locale } = useI18n();
   const year = new Date().getFullYear();
 
   return (
